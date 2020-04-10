@@ -1,32 +1,22 @@
 module.exports = {
   src_folders: ["test"],
-
+  page_objects_path: ["pages"],
   webdriver: {
     server_path: require('chromedriver').path,
-    port: 4444,
+    port: 9516,
     start_process : true,
+    cli_args: [
+      '--port=9516'
+    ]
   },
 
   test_settings: {
     default: {
       desiredCapabilities: {
-        browserName: "chrome"
+        browserName: "chrome",
+        loggingPrefs: { 'browser': 'ALL' }
       },
-      launch_url: 'https://nightwatchjs.org'
-    },
-
-    safari: {
-      desiredCapabilities : {
-        browserName : 'safari',
-        alwaysMatch: {
-          acceptInsecureCerts: false
-        }
-      },
-      webdriver: {
-        port: 4445,
-        start_process: true,
-        server_path: '/usr/bin/safaridriver'
-      }
+      launch_url: 'https://www.saucedemo.com/'
     },
 
     firefox: {
