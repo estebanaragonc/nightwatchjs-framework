@@ -1,0 +1,7 @@
+chromedriver.log
+geckodriver.log
+node_modules/
+package-lock.json
+tests_output/
+.gitignore	
+selenium-server.log

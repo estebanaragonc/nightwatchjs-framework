@@ -1,15 +1,13 @@
 var homePageCommands = {
   enterUsername: function(username) {
     this.api.pause(1000);
-    console.log(`Entering username : ${username}` );
     return this.waitForElementVisible('@txtUsername', 1000)
       .setValue('@txtUsername', username, function(response){
         console.log('dummy string1');
       });
   },
   enterPassword: function(password) {
-    this.api.pause(1000);
-    console.log(`Entering password : ${password}` );
+    this.api.pause(1000);    
     return this.waitForElementVisible('@txtPassword', 1000)
       .setValue('@txtPassword', password);
   }
